@@ -1,7 +1,8 @@
 package com.bast.spacex
 
 import android.app.Application
-import org.koin.android.ext.android.startKoin
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 import timber.log.Timber
 
 @Suppress("unused")
@@ -10,6 +11,10 @@ class BastApplication : Application() {
         super.onCreate()
 
         Timber.plant( Timber.DebugTree() )
-        startKoin(this, listOf(appModule))
+
+        startKoin{
+            androidContext( this@BastApplication )
+            modules( appModule )
+        }
     }
 }

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
             val lis2 = list2.await()
 
-            Timber.d( "Timber Count : (${lis1.size} + ${lis2.size})")
+            Timber.d( "Timber Count : %d",lis1.size + lis2.size )
         }
 
     }
