@@ -25,7 +25,7 @@ class RetrofitGeneratorImpl : RetrofitGenerator {
             .client( clientBuilder.build() )
             .addConverterFactory( MoshiConverterFactory.create() )
             .addCallAdapterFactory( CoroutineCallAdapterFactory() )
-            .baseUrl("https://api.spacexdata.com/v3")
+            .baseUrl("https://api.spacexdata.com/v3/")
             .build()
     }
 }
