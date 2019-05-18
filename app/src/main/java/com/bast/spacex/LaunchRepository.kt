@@ -13,7 +13,7 @@ class LaunchRepositoryImpl( private val serviceGenerator: ServiceGenerator ): La
         return try{
             serviceGenerator.createService( LaunchRemoteService::class ).allLaunchesAsync().await()
         } catch ( e: Exception ) {
-            Timber.e( e.toString() )
+            Timber.e( e )
 
             ArrayList()
         }

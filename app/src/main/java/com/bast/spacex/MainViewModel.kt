@@ -23,10 +23,6 @@ class MainViewModel( private val launchRepository: LaunchRepository ) : ViewMode
                 launches.value = launchesResult
             }
         }
-
-//        GlobalScope.launch( Dispatchers.Main ) {
-//            launches.value = async( Dispatchers.IO ) {  return@async launchRepository.allLaunches() }.await()
-//        }
     }
 
     override fun onCleared() {
